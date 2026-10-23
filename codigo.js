@@ -20,16 +20,16 @@ function obtenerProductos() {
         .catch(error => {
             console.error('Error al obtener datos:', error);
             document.getElementById('cuerpoTabla').innerHTML = 
-                `<tr><td colspan="5" style="color:red;">Error al cargar productos desde la API.</td></tr>`;
+                `<tr><td colspan="6" style="color:red;">Error al cargar productos desde la API.</td></tr>`;
         });
 }
 
-// 2. Función para renderizar la tabla con la columna de Rating
+// 2. Función para renderizar la tabla con las columnas Description y Rating
 function renderizarTabla(productos) {
     const cuerpo = document.getElementById('cuerpoTabla');
     
     if (productos.length === 0) {
-        cuerpo.innerHTML = `<tr><td colspan="5" class="empty-msg">No hay productos para mostrar en las categorías seleccionadas.</td></tr>`;
+        cuerpo.innerHTML = `<tr><td colspan="6" class="empty-msg">No hay productos para mostrar en las categorías seleccionadas.</td></tr>`;
         return;
     }
 
@@ -48,6 +48,7 @@ function renderizarTabla(productos) {
                 </td>
                 <td class="price-cell">$${prod.price.toFixed(2)}</td>
                 <td class="title-cell">${prod.title}</td>
+                <td class="desc-cell">${prod.description}</td>
                 <td>
                     <span class="rating-badge">
                         ⭐ ${rate} <small style="color:#666;">(${count} disp.)</small>

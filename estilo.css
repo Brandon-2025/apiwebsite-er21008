@@ -36,7 +36,7 @@ body {
 
 /* Contenedor Principal */
 .container {
-    max-width: 1200px;
+    max-width: 1280px;
     margin: 30px auto;
     padding: 0 20px;
 }
@@ -100,7 +100,7 @@ button#btnObtener:hover {
 .table-container {
     background: #ffffff;
     border-radius: 8px;
-    overflow: hidden;
+    overflow-x: auto;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
@@ -110,7 +110,7 @@ table {
 }
 
 th, td {
-    padding: 14px 16px;
+    padding: 12px 14px;
     text-align: center;
     border-bottom: 1px solid #eef2f5;
 }
@@ -133,8 +133,8 @@ tbody tr:hover {
 }
 
 .product-img {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     object-fit: contain;
     cursor: pointer;
     transition: transform 0.2s ease;
@@ -148,23 +148,33 @@ tbody tr:hover {
 .title-cell {
     text-align: left;
     font-weight: 500;
-    max-width: 350px;
+    max-width: 220px;
+}
+
+.desc-cell {
+    text-align: justify;
+    font-size: 0.85rem;
+    color: #555;
+    max-width: 320px;
+    max-height: 100px;
+    overflow-y: auto;
 }
 
 .price-cell {
     font-weight: bold;
     color: #28a745;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
 }
 
 .rating-badge {
     background-color: #fff3cd;
     color: #856404;
-    padding: 6px 12px;
+    padding: 6px 10px;
     border-radius: 12px;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     display: inline-block;
+    white-space: nowrap;
 }
 
 .empty-msg {
